@@ -1,0 +1,37 @@
+{% extends 'layouts/layout.html' %}
+{% load static %}
+{% block content %}
+    <div class="card">
+        <div class="item1"><img src="{% static 'img/pf1.jpeg' %}" alt="profile"></div>
+        <div class="item2">
+            <p>Hola, mi nombre es:</p>
+            <h2>Alexis Romero Mendoza</h2>
+            <p>Soy desarrollor de Aplicaciones Web y de escritorio.</p>
+        </div>        
+    </div>
+    
+    {% include 'partials/menu.html' %}
+
+    <div class="card3">
+        <div class="card-content">
+            <h3>Acerca de mi.</h3>
+            <p>Actualmente soy estudiante en la Universidad Autonoma de Ciudad
+                Juarez, estudio la carrera de ingenieria en sistemas computacionales.
+                <br> <br>
+                Trabajo en la industria maquiladora como auxiliar de ingenieria.
+                Dando a soporte a produccion con los proyectos. 
+                <br> <br>
+                En mi tiempo libre me dedico a desarrollar sistemas web con Django, y
+                algunas pequenas aplicaciones en Visual Studio con C#. 
+            </p>
+        </div>
+    </div>
+
+    <div class="card-myprojects">
+        <div class="card-content">
+            <h3>Mis proyectos.</h3>
+            {% include 'partials/projects.html' %}
+        </div>     
+    </div>
+
+{% endblock content %}
